@@ -10,11 +10,11 @@ const PasswordReset = () => {
 	const [error, setError] = useState("");
 	const param = useParams();
 	
-
+	const url = `https://password-reset-auth.herokuapp.com/password-reset/${param.id}/${param.token}`;
 	useEffect(() => {
 		const verifyUrl = async () => {
 			try {
-				const url = `https://password-reset-auth.herokuapp.com/password-reset/${param.id}/${param.token}`;
+				
 				await axios.get(url);
 				setValidUrl(true);
 			} catch (error) {
