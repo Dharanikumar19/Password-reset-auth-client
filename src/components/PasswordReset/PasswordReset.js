@@ -13,8 +13,7 @@ const PasswordReset = () => {
 	const url = `https://password-reset-auth.herokuapp.com/password-reset/${param.id}/${param.token}`;
 	useEffect(() => {
 		const verifyUrl = async () => {
-			try {
-				
+			try {	
 				await axios.post(url);
 				setValidUrl(true);
 			} catch (error) {
