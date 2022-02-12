@@ -4,7 +4,7 @@ import axios from "axios";
 import "./PasswordReset.css";
 
 const PasswordReset = () => {
-	const [validUrl, setValidUrl] = useState(true);
+	const [validUrl, setValidUrl] = useState(false);
 	const [password, setPassword] = useState("");
 	const [msg, setMsg] = useState("");
 	const [error, setError] = useState("");
@@ -15,7 +15,7 @@ const PasswordReset = () => {
 		const verifyUrl = async () => {
 			try {
 				
-				await axios.get(url);
+				await axios.post(url);
 				setValidUrl(true);
 			} catch (error) {
 				setValidUrl(false);
