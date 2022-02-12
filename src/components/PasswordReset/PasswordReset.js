@@ -4,7 +4,7 @@ import axios from "axios";
 import "./PasswordReset.css";
 
 const PasswordReset = () => {
-	const [validUrl, setValidUrl] = useState(false);
+	const [validUrl, setValidUrl] = useState(true);
 	const [password, setPassword] = useState("");
 	const [msg, setMsg] = useState("");
 	const [error, setError] = useState("");
