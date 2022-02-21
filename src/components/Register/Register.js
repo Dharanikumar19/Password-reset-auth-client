@@ -21,6 +21,8 @@ const Register = () => {
 		e.preventDefault();
 		try {
 			const url = "https://password-reset-auth.herokuapp.com/users";
+			//const url = "http://localhost:8080/users";
+			
 			const { data: res } = await axios.post(url, data);	
 			setMsg(res.message);				
 		} catch (error) {

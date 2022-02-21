@@ -15,6 +15,7 @@ const Login = () => {
 		e.preventDefault();
 		try {
 			const url = "https://password-reset-auth.herokuapp.com/auth";
+			//const url = "http://localhost:8080/auth";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			window.location = "/";

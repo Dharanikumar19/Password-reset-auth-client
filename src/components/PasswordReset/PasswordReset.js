@@ -11,6 +11,7 @@ const PasswordReset = () => {
 	const param = useParams();
 	
 	const url = `https://password-reset-auth.herokuapp.com/password-reset/${param.id}/${param.token}`;
+	//const url = `http://localhost:8080/password-reset/${param.id}/${param.token}`;
 	useEffect(() => {
 		const verifyUrl = async () => {
 			try {	
