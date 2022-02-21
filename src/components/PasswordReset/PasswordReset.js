@@ -15,7 +15,7 @@ const PasswordReset = () => {
 	useEffect(() => {
 		const verifyUrl = async () => {
 			try {	
-				await axios.post(url);
+				await axios.get(url);
 				setValidUrl(true);
 			} catch (error) {
 				setValidUrl(false);
